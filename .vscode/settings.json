@@ -1,0 +1,14 @@
+{
+    "C_Cpp.copilotHover": "enabled",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.chat.alternateGptPrompt.enabled": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.executePrompt.enabled": true,
+    "github.copilot.chat.generateTests.codeLens": true,
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
