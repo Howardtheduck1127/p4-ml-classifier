@@ -11,8 +11,11 @@ class Classifier {
   public:
     //REQUIRES: argc must be 2 (TRAIN ONLY) or 3 (TRAIN + TEST)
     //EFFECTS:  copies argc into a class var for functions to use
+    //          sets class vars to default
     Classifier(int argc) : argc(argc) {
       assert(argc == 2 || argc == 3);
+
+      total_posts = 0;
     }
 
     //REQUIRES: train_file is a good file (valid csvstream)
@@ -60,8 +63,7 @@ class Classifier {
     //REQUIRES: classifier has been trained (total_posts > 0)
     //EFFECTS:  print classifier info: summary stats, and classifier parameters
     //          for each label
-    void print_classifier_info() {
-      assert(total_posts > 0); // ASK PROFESSOR
+    void print_classifier_info() { 
       cout << "classes:\n";
 
       for (string label : labels) {
@@ -170,7 +172,6 @@ class Classifier {
     //REQUIRES: total_points > 0
     //EFFECTS:  calculate log-prior probability
     double calc_prior(string label) {
-      assert(total_posts > 0);
       return log(posts_with_label_C[label] / static_cast<double>(total_posts));
     }
 
